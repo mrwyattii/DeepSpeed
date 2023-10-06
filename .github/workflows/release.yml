@@ -31,7 +31,7 @@ jobs:
     - name: Bump version
       run: |
         python release/bump_patch_version.py --current_version ${{ env.RELEASE_VERSION }}
-    - name: Add modified files
+    - name: Add version.txt
       run: |
         git add version.txt
     - name: Create Pull Request
