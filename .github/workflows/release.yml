@@ -40,9 +40,7 @@ jobs:
         token: ${{ secrets.GHP_TOKEN }}
         body: |
           **Auto-generated PR to update version.txt after a DeepSpeed release**
-          Repo    - [${{ github.repository }}](https://github.com/${{ env.REPO }})
-          PR name - ${{ env.PR_NAME }}
-          Commit  - ${{ env.REPO }}@${{ env.COMMIT_SHA }}
+          Version - ${{ env.RELEASE_VERSION }}
           Author  - @${{ github.actor }}
         branch: AutoPR/${{ env.RELEASE_VERSION }}
         assignees: ${{ github.actor }}
